@@ -4,12 +4,27 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+import { VoterComponent } from './voter/voter.component';
+import { TodosComponent } from './todos/todos.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    UsersComponent,
+    VoterComponent,
+    TodosComponent,
+    UserDetailsComponent,
+    HighlightDirective
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     FormsModule,
     HttpModule
